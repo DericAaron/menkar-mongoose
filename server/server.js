@@ -7,9 +7,8 @@ const app = express();
 
 //uses
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
-//require in our mongoose model
-const Book = require('./modules/models/book.schema');
 
 
 ////-------------------------------NEW-------------
@@ -30,6 +29,11 @@ mongoose.connection.on('error', (error) =>{
 });
 
 ///---------------END NEW--------------------
+
+
+//add router
+const bookRouter = require('./routers/book.router');
+app.use('/book', bookRouter);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
