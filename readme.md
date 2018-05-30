@@ -8,9 +8,9 @@ todo:
 - [] make a new Node/express project
     - [x] Git setup
     - [x] npm init and installs
-    - [] project directory structure
-- [] setup node/express router
-- [] setup mongoose to connect to database
+    - [x] project directory structure
+- [x] setup node/express
+- [x] setup mongoose to connect to database
 - [] Have router send back all out books - GET
 - [] setup router to add book - POST
 - [] setup router to delete a book - DELETE
